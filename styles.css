@@ -1,0 +1,121 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .container {
+    width: 300px;
+    height: 650px;
+    border: 2px solid black;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .hidden-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    position: absolute;
+    flex-wrap: wrap;
+  }
+  
+  @media (max-width: 80px) {
+    .hidden-text {
+      animation: textRepeat 13s linear infinite;
+    }
+  }
+  
+  @media (max-width: 80px) {
+    .goodbye {
+      animation: textColorChane 2s linear infinite;
+    }
+    .goodbye:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+    .goodbye:nth-child(3) {
+      animation-delay: 0.4s;
+    }
+    .goodbye:nth-child(4) {
+      animation-delay: 0.6s;
+    }
+    .goodbye:nth-child(5) {
+      animation-delay: 0.8;
+    }
+    .goodbye:nth-child(6) {
+      animation-delay: 1s;
+    }
+    .goodbye:nth-child(7) {
+      animation-delay: 1.2s;
+    }
+    .goodbye:nth-child(8) {
+      animation-delay: 1.4s;
+    }
+    .goodbye:nth-child(9) {
+      animation-delay: 1.6s;
+    }
+    .goodbye:nth-child(10) {
+      animation-delay: 1.8s;
+    }
+    .goodbye:nth-child(11) {
+      animation-delay: 2s;
+    }
+  }
+  
+  @media (min-width: 80px) {
+    .goodbye {
+      opacity: 0;
+    }
+  }
+  
+  @keyframes textRepeat {
+    0% {
+      transform: translateY(-800px);
+    }
+    100% {
+      transform: translateY(650px);
+    }
+  }
+  
+  @keyframes textColorChane {
+    0% {
+      color: red;
+    }
+    20% {
+      color: orange;
+    }
+    40% {
+      color: yellow;
+    }
+    60% {
+      color: green;
+    }
+    80% {
+      color: blue;
+    }
+    100% {
+      color: purple;
+    }
+  }
+  
+  .status-bar {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  @media (max-width: 200px) {
+    .status-bar span,
+    i {
+      opacity: 0;
+    }
+  }
+  
+  .status-bar span {
+    margin-left: 10px;
+  }
+  
